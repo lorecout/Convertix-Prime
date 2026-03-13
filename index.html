@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Convertix Prime | PDF e Conversões</title>
+    <meta
+      name="description"
+      content="Ferramenta premium para gerar PDF de texto e imagens, além de conversões diversas em um só painel."
+    />
+    <meta name="adsense-client" content="" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="top-nav" id="inicio">
+      <div class="top-nav-inner">
+        <a class="brand" href="#inicio">Convertix Prime</a>
+        <nav class="top-menu" aria-label="Navegação principal">
+          <a href="#ferramentas">Ferramentas</a>
+          <a href="#bloco-pdf-texto">Texto</a>
+          <a href="#bloco-pdf-imagem">Imagens</a>
+          <a href="#bloco-pdf-extrair">Extrair</a>
+          <a href="#bloco-csv-pdf">CSV</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="shell">
+      <span class="backdrop-shape backdrop-shape--one" aria-hidden="true"></span>
+      <span class="backdrop-shape backdrop-shape--two" aria-hidden="true"></span>
+      <span class="backdrop-shape backdrop-shape--three" aria-hidden="true"></span>
+
+      <section class="masthead" aria-labelledby="titulo-principal">
+        <div class="masthead-copy">
+          <p class="kicker">PDF STUDIO</p>
+          <p class="hero-editorial-note">Visual inspirado em dashboards de conversão modernos.</p>
+          <h1 id="titulo-principal">Converta, extraia e organize PDFs em segundos</h1>
+          <p class="lead">
+            Um painel direto para texto em PDF, imagens em lote, extração de conteúdo e geração de
+            tabelas CSV em PDF.
+          </p>
+
+          <div class="hero-pills" aria-label="Destaques do serviço">
+            <span>Texto em PDF</span>
+            <span>Imagens em lote</span>
+            <span>PDF para Texto</span>
+            <span>CSV para PDF</span>
+          </div>
+
+          <div class="masthead-meta" aria-label="Métricas da plataforma">
+            <div>
+              <strong>4</strong>
+              <span>Ferramentas ativas</span>
+            </div>
+            <div>
+              <strong>100%</strong>
+              <span>Rodando no navegador</span>
+            </div>
+            <div>
+              <strong>0</strong>
+              <span>Cadastro obrigatório</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="masthead-workbench" aria-label="Acesso rápido às conversões">
+          <div class="upload-card">
+            <span class="upload-icon" aria-hidden="true">↑</span>
+            <h3>Upload ou selecione seu arquivo</h3>
+            <p>Entre por aqui e siga para a ferramenta ideal em um clique.</p>
+            <button class="upload-cta" id="heroUploadBtn" type="button">Upload ou Selecionar Arquivo</button>
+          </div>
+
+          <div class="quick-cards" aria-label="Atalhos de conversão">
+            <button class="quick-card" type="button" data-open-tab="texto" data-focus="#pdfContent">
+              <strong>Texto para PDF</strong>
+              <span>Crie documentos em segundos</span>
+            </button>
+            <button class="quick-card" type="button" data-open-tab="imagem" data-focus="#imageInput">
+              <strong>Imagem para PDF</strong>
+              <span>Junte múltiplas imagens</span>
+            </button>
+            <button class="quick-card" type="button" data-open-tab="extrair" data-focus="#pdfExtractInput">
+              <strong>PDF para Texto</strong>
+              <span>Extraia conteúdo com rapidez</span>
+            </button>
+            <button class="quick-card" type="button" data-open-tab="csv" data-focus="#csvInput">
+              <strong>CSV para PDF</strong>
+              <span>Monte tabelas formatadas</span>
+            </button>
+          </div>
+        </aside>
+      </section>
+
+      <section class="ad-slot" data-ad-slot>
+        <p class="ad-label">Publicidade</p>
+        <div class="ad-frame">
+          <ins
+            class="adsbygoogle"
+            style="display:block"
+            data-ad-client=""
+            data-ad-slot="1234567890"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+          ></ins>
+          <p class="ad-fallback">Espaço para anúncio. Configure seu ID AdSense para ativar.</p>
+        </div>
+      </section>
+
+      <section class="panel-grid" id="ferramentas">
+        <div class="tool-tabs" role="tablist" aria-label="Tipos de conversão PDF">
+          <button class="tool-tab is-active" role="tab" aria-selected="true" data-tab="texto">Texto em PDF</button>
+          <button class="tool-tab" role="tab" aria-selected="false" data-tab="imagem">Imagens em PDF</button>
+          <button class="tool-tab" role="tab" aria-selected="false" data-tab="extrair">PDF para Texto</button>
+          <button class="tool-tab" role="tab" aria-selected="false" data-tab="csv">CSV para PDF</button>
+        </div>
+
+        <article class="panel panel-tone-a reveal tab-panel is-active" data-panel="texto" id="bloco-pdf-texto">
+          <div class="panel-head">
+            <div class="panel-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 4C4.9 4 4 4.9 4 6v20c0 1.1.9 2 2 2h20c1.1 0 2-.9 2-2V10l-6-6H6z" fill="currentColor" opacity="0.8"/>
+                <rect x="14" y="8" width="2" height="2" fill="#fff"/>
+                <path d="M8 14h16m-16 4h16m-16 4h10" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <h2>Texto em PDF</h2>
+              <span class="badge">Rápido</span>
+            </div>
+          </div>
+
+          <div class="panel-ornament panel-ornament--paper" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <label for="pdfTitle">Título</label>
+          <input id="pdfTitle" type="text" placeholder="Ex: Proposta comercial" />
+
+          <label for="pdfContent">Conteúdo</label>
+          <textarea id="pdfContent" rows="8" placeholder="Digite ou cole seu texto aqui..."></textarea>
+
+          <button id="generateTextPdf" class="btn">Gerar PDF de Texto</button>
+          <p class="message" id="textPdfFeedback" aria-live="polite"></p>
+        </article>
+
+        <article class="panel panel-tone-b reveal delay-1 tab-panel" data-panel="imagem" id="bloco-pdf-imagem">
+          <div class="panel-head">
+            <div class="panel-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="4" width="24" height="24" rx="2" fill="currentColor" opacity="0.8"/>
+                <circle cx="10" cy="10" r="2" fill="#fff"/>
+                <path d="M4 20l8-8 6 6 8-8v8" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <h2>Imagens em PDF</h2>
+              <span class="badge">Multipágina</span>
+            </div>
+          </div>
+
+          <div class="panel-ornament panel-ornament--gallery" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <p class="hint">Selecione imagens e gere um PDF organizado em páginas.</p>
+          <input id="imageInput" type="file" accept="image/*" multiple />
+          <div id="imagePreview" class="preview-grid" aria-label="Prévia das imagens"></div>
+
+          <button id="generateImagePdf" class="btn">Gerar PDF de Imagens</button>
+          <p class="message" id="imagePdfFeedback" aria-live="polite"></p>
+        </article>
+
+        <article class="panel panel-tone-a reveal delay-1 tab-panel" data-panel="extrair" id="bloco-pdf-extrair">
+          <div class="panel-head">
+            <div class="panel-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 4C4.9 4 4 4.9 4 6v20c0 1.1.9 2 2 2h20c1.1 0 2-.9 2-2V10l-6-6H6z" fill="currentColor" opacity="0.8"/>
+                <path d="M10 14h12m-12 3h10m-10 3h8" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M22 8v6" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <h2>PDF para Texto</h2>
+              <span class="badge">Extrator</span>
+            </div>
+          </div>
+
+          <div class="panel-ornament panel-ornament--extract" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <p class="hint">Selecione um PDF e extraia todo o texto em um arquivo.</p>
+          <input id="pdfExtractInput" type="file" accept="application/pdf" />
+          <div id="extractSelectedFile" class="selected-file hidden-action" aria-live="polite">
+            <span id="extractSelectedFileName"></span>
+            <button id="removeExtractFileBtn" type="button" class="remove-file-btn" aria-label="Remover arquivo selecionado">x</button>
+          </div>
+          
+          <button id="extractPdfBtn" class="btn">Extrair Texto</button>
+          <p class="message" id="extractPdfFeedback" aria-live="polite"></p>
+          <textarea id="extractedText" class="output-box" readonly></textarea>
+          <button id="copyExtractedBtn" class="btn btn-secondary hidden-action">Copiar Texto</button>
+        </article>
+
+        <article class="panel panel-tone-b reveal tab-panel" data-panel="csv" id="bloco-csv-pdf">
+          <div class="panel-head">
+            <div class="panel-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4h24v24H4V4z" fill="currentColor" opacity="0.8"/>
+                <line x1="4" y1="13" x2="28" y2="13" stroke="#fff" stroke-width="1"/>
+                <line x1="4" y1="22" x2="28" y2="22" stroke="#fff" stroke-width="1"/>
+                <line x1="12" y1="4" x2="12" y2="28" stroke="#fff" stroke-width="1"/>
+                <line x1="20" y1="4" x2="20" y2="28" stroke="#fff" stroke-width="1"/>
+              </svg>
+            </div>
+            <div>
+              <h2>CSV para PDF</h2>
+              <span class="badge">Tabela</span>
+            </div>
+          </div>
+
+          <div class="panel-ornament panel-ornament--table" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <p class="hint">Cole dados CSV (separados por vírgula) e gere um PDF formatado.</p>
+          <textarea id="csvInput" rows="6" placeholder="coluna1,coluna2,coluna3&#10;valor1,valor2,valor3&#10;valor4,valor5,valor6"></textarea>
+          
+          <label for="pdfTableTitle">Título da Tabela</label>
+          <input id="pdfTableTitle" type="text" placeholder="Ex: Relatório de vendas" />
+          
+          <button id="generateCsvPdfBtn" class="btn">Gerar PDF da Tabela</button>
+          <p class="message" id="csvPdfFeedback" aria-live="polite"></p>
+        </article>
+
+      </section>
+
+      <section class="ad-slot" data-ad-slot>
+        <p class="ad-label">Publicidade</p>
+        <div class="ad-frame">
+          <ins
+            class="adsbygoogle"
+            style="display:block"
+            data-ad-client=""
+            data-ad-slot="9876543210"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+          ></ins>
+          <p class="ad-fallback">Espaço para anúncio. Configure seu ID AdSense para ativar.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" aria-label="Informações legais">
+      <div class="site-footer-inner">
+        <p>© 2026 Convertix Prime. Todos os direitos reservados.</p>
+        <nav class="legal-links" aria-label="Links legais">
+          <a href="termos.html">Termos de Uso</a>
+          <a href="privacidade.html">Política de Privacidade</a>
+        </nav>
+      </div>
+    </footer>
+
+    <section class="cookie-banner" id="cookieBanner" aria-label="Consentimento de cookies" hidden>
+      <div class="cookie-banner-inner">
+        <p>
+          Utilizamos cookies opcionais para métricas e melhoria de experiência. Você pode aceitar ou recusar.
+          Saiba mais em <a href="privacidade.html">Política de Privacidade</a>.
+        </p>
+        <div class="cookie-actions">
+          <button class="btn btn-secondary cookie-btn" id="rejectCookiesBtn" type="button">Recusar</button>
+          <button class="btn cookie-btn" id="acceptCookiesBtn" type="button">Aceitar</button>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script>pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';</script>
+    <script src="script.js"></script>
+  </body>
+</html>
