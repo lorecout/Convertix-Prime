@@ -70,6 +70,20 @@ function applyAdsClient(clientId) {
   });
 }
 
+function renderAdsWhenReady(attempt = 0) {
+  if (typeof window.adsbygoogle === 'undefined') {
+    if (attempt < 20) {
+      setTimeout(() => renderAdsWhenReady(attempt + 1), 150);
+    }
+    return;
+  }
+
+  adInsElements.forEach(() => {
+    (window.adsbygoogle = window.adsbygoogle || []).push({});
+  });
+  adsInitialized = true;
+}
+
 function initAds() {
   const consent = localStorage.getItem('convertix_cookie_consent');
   const clientId = getAdsClientId();
@@ -87,18 +101,7 @@ function initAds() {
     return;
   }
 
-  const script = document.createElement('script');
-  script.async = true;
-  script.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${clientId}`;
-  script.crossOrigin = 'anonymous';
-  script.onload = () => {
-    adInsElements.forEach(() => {
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
-    });
-  };
-
-  document.head.appendChild(script);
-  adsInitialized = true;
+  renderAdsWhenReady();
 }
 
 function activateToolTab(tabName) {
